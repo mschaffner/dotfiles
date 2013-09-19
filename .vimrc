@@ -44,9 +44,13 @@ endif
 " Remap 'jk' to the Esc key; http://vim.wikia.com/wiki/Avoid_the_escape_key
 :imap jk <Esc>
 
-" Make a shortcut for :set list and :set nolist
-:nmap ,l :set nolist<CR><Esc>
-:nmap ,L :set list listchars=trail:¬,eol:$,tab:››<CR><Esc>
+" Shortcuts for :set list and :set nolist
+:nmap ,L :set nolist<Esc>
+:nmap ,l :set list listchars=trail:¬,eol:$,tab:››<Esc>
+
+" Shortcuts for :set number and :set nonumber
+:nmap ,n :set nonumber<Esc>
+:nmap ,N :set number<Esc>
 
 " Set paste-mode with <,p>
 nnoremap ,p :set invpaste<CR>
