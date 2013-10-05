@@ -149,6 +149,10 @@ let NERDTreeIgnore = ['\.pyc$']
 
 " Controlp makes finding files in a project super easy.
 " https://github.com/kien/ctrlp.vim
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(swp|pyc)$'
+    \ }
 
 " Fugitivie is git integration
 " https://github.com/tpope/vim-fugitive
