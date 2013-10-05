@@ -1,0 +1,22 @@
+[user]
+    name = 'name'
+    email = 'email'
+
+[color]
+    ui = auto
+
+[color "branch"]
+    current = cyan
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = cyan bold
+
+[color "status"]
+    added = yellow
+    changed = cyan
+    untracked = green
