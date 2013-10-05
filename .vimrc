@@ -3,14 +3,14 @@
 " ##############
 
 set nocompatible                " Enable new stuff
-set ruler                       " show the cursor position all the time
-set ttyfast                     " Tell vim we're using a fast terminal connection
-set showcmd                     " display incomplete commands
 set incsearch                   " do incremental searching
+set showcmd                     " display incomplete commands
 set noshowmode                  " vim-powerline takes care of this
+set ruler                       " show the cursor position all the time
 set history=50                  " keep 50 lines of command line history
-set laststatus=2                " vim-powerline needs this to display status when opening first buffer
+set ttyfast                     " Tell vim we're using a fast terminal connection
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
+set laststatus=2                " vim-powerline needs this to display status when opening first buffer
 set number
 set expandtab
 set tabstop=4
@@ -103,6 +103,23 @@ if has("autocmd")
 else
   set autoindent		" always set autoindenting on
 endif
+
+
+" ###############
+" ## Functions ##
+" ###############
+
+" Sort lines based on length, used: {range}call SortLines(),
+" {range}call SortLines(1) for reversed order
+function! SortLines(...) range
+    execute a:firstline . "," . a:lastline . 's/^\(.*\)$/\=strdisplaywidth( submatch(0) ) . " " . submatch(0)/'
+    if a:0
+        execute a:firstline . "," . a:lastline . 'sort n'
+    else
+        execute a:firstline . "," . a:lastline . 'sort! n'
+    endif
+    execute a:firstline . "," . a:lastline . 's/^\d\+\s//'
+endfunction
 
 
 " #######################
