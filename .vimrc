@@ -52,6 +52,10 @@ endif
 :nmap ,n :set nonumber<Esc>
 :nmap ,N :set number<Esc>
 
+" Shortcuts for turning spellcheck on in the local buffer
+:nmap ,s :setlocal spell spelllang=en_us<Esc>
+:nmap ,S :setlocal nospell<Esc>
+
 " Set paste-mode with <,p>
 nnoremap ,p :set invpaste<CR>
 
