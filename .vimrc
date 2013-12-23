@@ -55,6 +55,10 @@ endif
 " Shortcuts for turning spellcheck on in the local buffer
 :nmap ,s :setlocal spell spelllang=en_us<Esc>
 :nmap ,S :setlocal nospell<Esc>
+"
+" Shortcuts for calling SortLines() on a visual selection
+:vmap <F5> :call SortLines()<Esc>
+:vmap <F6> :call SortLines(1)<Esc>
 
 " Set paste-mode with <,p>
 nnoremap ,p :set invpaste<CR>
