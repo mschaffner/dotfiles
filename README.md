@@ -5,6 +5,10 @@ git clone git@github.com:mschaffner/dotfiles.git<br>
 git submodule init<br>
 git submodule update<br>
 
+Adding a submodule
+==================
+git submodule add (git link) (path)
+
 A note on git and config files
 ==============================
 If you need to ignore local changes to tracked files (we have that with local
