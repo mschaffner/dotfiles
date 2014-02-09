@@ -151,6 +151,9 @@ call pathogen#helptags()
 " https://github.com/scrooloose/syntastic
 let g:syntastic_python_checkers=['pylint']
 
+" Turn off noisy warnings (103=variable naming, 111=missing docstring)
+let g:syntastic_python_pylint_post_args="-d C0103,C0111 "
+
 " vim-powerline  - cooler vim status bar
 " https://github.com/Lokaltog/vim-powerline
 let g:bufferline_echo=0
