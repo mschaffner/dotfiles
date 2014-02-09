@@ -111,7 +111,7 @@ if has("autocmd")
     autocmd FileType text setlocal textwidth=78
 
     " Always trim whitespace when writing a file
-    autocmd BufWritePre * :%s/\s\+$//e
+    autocmd BufWritePre * :call StripTrailingWhitespaces()
 
   augroup END
 else
@@ -134,6 +134,14 @@ function! SortLines(...) range
     endif
     execute a:firstline . "," . a:lastline . 's/^\d\+\s//'
 endfunction
+
+" Function to trim whitespace and return cursor to starting point
+fun! StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
 
 
 " #######################
