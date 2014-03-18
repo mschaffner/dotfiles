@@ -67,7 +67,7 @@ nnoremap ,p :set invpaste<CR>
 :nmap ,d Oimport pdb; pdb.set_trace()<Esc>
 
 " Insert python comment box
-:nmap ,c 80i#<Esc>j80i#<Esc>O# <Esc>
+:nmap ,c O<Esc>80i#<Esc>o#<Esc>o<Esc>80i#<Esc>k
 
 " CDC = Change to Directory of Current file
 " http://vim.wikia.com/wiki/Change_to_the_directory_of_the_current_file
