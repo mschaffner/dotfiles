@@ -10,6 +10,7 @@ set ruler                       " show the cursor position all the time
 set history=50                  " keep 50 lines of command line history
 set ttyfast                     " Tell vim we're using a fast terminal connection
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
+set timeoutlen=450              " Time to wait for a command (Such as after a leader key)
 set laststatus=2                " vim-powerline needs this to display status when opening first buffer
 set number
 set expandtab
@@ -34,7 +35,6 @@ endif
 if has('mouse')
   set mouse=a
 endif
-
 
 " ###############
 " ## Shortcuts ##
@@ -170,7 +170,7 @@ let g:Powerline_cache_enabled = 1
 
 " NERDTree is a better filebrowsing plugin
 " https://github.com/scrooloose/nerdtree
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$','\.git','\.swp$','\.DS_Store']
 
 " Controlp makes finding files in a project super easy.
 " https://github.com/kien/ctrlp.vim
