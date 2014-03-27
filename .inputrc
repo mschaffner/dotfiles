@@ -1,0 +1,13 @@
+# Show potential matches for words with more than one possible completion rather than ringing the bell
+set show-all-if-ambiguous on
+
+# Show potential matches for incomplete words rather than ringing the bell
+set show-all-if-unmodified on
+
+
+# Presets:
+set visible-stats on
+set mark-directories on
+set match-hidden-files off
+
+"\e\e[3~": kill-word
