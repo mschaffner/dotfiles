@@ -9,6 +9,7 @@ alias tagrepo='cd .git; ctags -R ..; cd ..;'
 alias addmod="git status | grep 'modified' | awk "\''{print $3}'\'" | xargs git add"
 alias cbranch="git branch | grep -v '*' | grep -v 'master' | xargs git branch -d"
 alias ack="ack-grep"
+alias ipython="ipython --colors Linux"
 
 # Colored term & prompt
 export TERM=xterm-256color
