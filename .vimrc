@@ -7,9 +7,10 @@ set incsearch                   " do incremental searching
 set showcmd                     " display incomplete commands
 set noshowmode                  " vim-powerline takes care of this
 set ruler                       " show the cursor position all the time
-set history=50                  " keep 50 lines of command line history
+set history=20                  " keep 20 lines of command line history
 set ttyfast                     " Tell vim we're using a fast terminal connection
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
+set viminfo='20,<50,s10         " Store less in .viminfo so vim doesn't get bogged down
 set timeoutlen=450              " Time to wait for a command (Such as after a leader key)
 set laststatus=2                " vim-powerline needs this to display status when opening first buffer
 set number
