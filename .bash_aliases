@@ -2,14 +2,31 @@
 # My stuff
 ################################################################################
 
+#################################################################################
+# OS independent aliases
+#################################################################################
 alias c='clear'
-alias ls='ls --color'
 alias tree='tree -C'
-alias tagrepo='cd .git; ctags -R ..; cd ..;'
 alias addmod="git status | grep 'modified' | awk "\''{print $3}'\'" | xargs git add"
 alias cbranch="git branch | grep -v '*' | grep -v 'master' | xargs git branch -d"
-alias ack="ack-grep"
 alias ipython="ipython --colors Linux"
+
+#################################################################################
+# OS specific aliases
+#################################################################################
+# If using ubuntu
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    alias tagrepo='cd .git; ctags -R ..; cd ..;'
+    alias ack='ack-grep'
+    alias ls='ls --color'
+
+# If using mac
+elif [[ "$OSTYPE" == "darwin11" ]]; then
+    # Make mac use right ctags
+    alias ctags="`brew --prefix`/bin/ctags"
+    alias tagrepo='cd .git; ctags -R ..; cd ..;'
+fi
+
 
 # Colored term & prompt
 export TERM=xterm-256color
