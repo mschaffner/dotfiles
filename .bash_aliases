@@ -16,7 +16,7 @@ alias ipython="ipython --colors Linux"
 #################################################################################
 # If using ubuntu
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    alias tagrepo='cd .git; ctags -R ..; cd ..;'
+    alias tagrepo='cd .git; ctags -R --exclude="*dist/*" ..; cd ..;'
     alias ack='ack-grep'
     alias ls='ls --color'
 
