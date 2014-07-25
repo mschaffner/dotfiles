@@ -8,7 +8,7 @@
 alias c='clear'
 alias tree='tree -C'
 alias addmod="git status | grep 'modified' | awk "\''{print $3}'\'" | xargs git add"
-alias cbranch="git branch | grep -v '*' | grep -v 'master' | xargs git branch -d"
+alias cbranch="git branch | grep -v '*' | grep -v 'master' | xargs git branch -d &> /dev/null; echo 'Done'"
 alias ipython="ipython --colors Linux"
 
 #################################################################################
