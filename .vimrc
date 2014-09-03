@@ -43,32 +43,32 @@ endif
 " http //vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_1)
 
 " Remap 'jk' to the Esc key; http://vim.wikia.com/wiki/Avoid_the_escape_key
-:imap jk <Esc>
+imap jk <Esc>
 
 " Shortcuts for :set list and :set nolist
-:nmap ,L :set nolist<Esc>
-:nmap ,l :set list listchars=trail:¬,eol:$,tab:››<Esc>
+nmap ,L :set nolist<Esc>
+nmap ,l :set list listchars=trail:¬,eol:$,tab:››<Esc>
 
 " Shortcuts for :set number and :set nonumber
-:nmap ,n :set nonumber<Esc>
-:nmap ,N :set number<Esc>
+nmap ,n :set nonumber<Esc>
+nmap ,N :set number<Esc>
 
 " Shortcuts for turning spellcheck on in the local buffer
-:nmap ,s :setlocal spell spelllang=en_us<Esc>
-:nmap ,S :setlocal nospell<Esc>
+nmap ,s :setlocal spell spelllang=en_us<Esc>
+nmap ,S :setlocal nospell<Esc>
 "
 " Shortcuts for calling SortLines() on a visual selection
-:vmap <F5> :call SortLines()<Esc>
-:vmap <F6> :call SortLines(1)<Esc>
+vmap <F5> :call SortLines()<Esc>
+vmap <F6> :call SortLines(1)<Esc>
 
 " Set paste-mode with <,p>
 nnoremap ,p :set invpaste<CR>
 
 " Insert python debug statement
-:nmap ,d Oimport pdb; pdb.set_trace()<Esc>
+nmap ,d Oimport pdb; pdb.set_trace()<Esc>
 
 " Insert python comment box
-:nmap ,c O<Esc>80i#<Esc>o#<Esc>o<Esc>80i#<Esc>k
+nmap ,c O<Esc>80i#<Esc>o#<Esc>o<Esc>80i#<Esc>k
 
 " CDC = Change to Directory of Current file
 " http://vim.wikia.com/wiki/Change_to_the_directory_of_the_current_file
