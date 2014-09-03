@@ -10,6 +10,7 @@ alias tree='tree -C'
 alias addmod="git status | grep 'modified' | awk "\''{print $3}'\'" | xargs git add"
 alias cbranch="git branch | grep -v '*' | grep -v 'master' | xargs git branch -d &> /dev/null; echo 'Done'"
 alias ipython="ipython --colors Linux"
+alias ggraph="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 
 #################################################################################
 # OS specific aliases
