@@ -61,6 +61,9 @@ nmap ,S :setlocal nospell<Esc>
 vmap <F5> :call SortLines()<Esc>
 vmap <F6> :call SortLines(1)<Esc>
 
+" Shortcut for inserting a timestamp
+nnoremap ,t "=strftime("%c")<CR>P
+
 " Set paste-mode with <,p>
 nnoremap ,p :set invpaste<CR>
 
