@@ -45,3 +45,18 @@ source ~/.git-completion.bash
 parse_git_branch() {
       git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
+
+################################################################################
+# Functions
+#################################################################################
+
+function pullmaster {
+    BRANCH=$(git branch | grep '*' | awk '{print $2}')
+    STASH=$(git stash save tmpstuff)
+    git checkout master
+    git pull
+    git checkout $BRANCH
+    if [ "$STASH" != "No local changes to save" ]; then
+        git stash apply stash^{/tmpstuff}
+    fi
+}
