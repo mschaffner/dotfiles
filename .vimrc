@@ -179,7 +179,7 @@ let NERDTreeIgnore = ['\.pyc$','\.git','\.swp$','\.DS_Store']
 " Controlp makes finding files in a project super easy.
 " https://github.com/kien/ctrlp.vim
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v([\/]\.(git|hg|svn)$)|(dist/|pysetup/)',
+    \ 'dir':  '\v([\/]\.(git|hg|svn)$)|(dist/|pysetup/|virtualenv/)',
     \ 'file': '\v\.(swp|pyc)$'
     \ }
 
