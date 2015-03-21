@@ -21,13 +21,5 @@ To exclude a file from local index add it to .git/info/exclude
 connect the dots on a new machine
 ---------------------------------
 ```bash
-cd ~/dev/
-git clone http://github.com/mschaffner/dotfiles.git
-ln -s ~/dev/dotfiles/.vim ~/.vim
-ln -s ~/dev/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dev/dotfiles/.ctags ~/.ctags
-ln -s ~/dev/dotfiles/.inputrc ~/.inputrc
-ln -s ~/dev/dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ~/dev/dotfiles/.bash_aliases ~/.bash_aliases
-git submodule init
-git submodule update
+curl "https://raw.githubusercontent.com/mschaffner/dotfiles/master/setup.sh" > setup.sh
+sh setup.sh
